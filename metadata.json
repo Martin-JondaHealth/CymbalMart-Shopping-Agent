@@ -1,0 +1,6 @@
+{
+  "name": "CymbalMart Party Planner",
+  "description": "Smart party planning and budget-conscious shopping agent for CymbalMart with AI assistant, dynamic shopping list refinement, and real-time budget optimization.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

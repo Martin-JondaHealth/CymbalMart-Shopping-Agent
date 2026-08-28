@@ -1,0 +1,553 @@
+import { PresetPartyPlan, ShoppingItem } from '../types';
+
+export const PRESET_PARTIES: PresetPartyPlan[] = [
+  {
+    id: 'summer-backyard-bbq',
+    title: 'Sizzling Backyard BBQ Bash',
+    partyType: 'BBQ & Cookout',
+    theme: 'Rustic Smokehouse & Lawn Games',
+    guestCount: 16,
+    targetBudget: 220,
+    tagline: 'Juicy burgers, craft iced teas, vibrant party lights, and lawn games.',
+    description: 'Perfect weekend cookout with premium burger patties, brioche buns, craft condiments, potato salad, iced tea, and disposable eco-bamboo tableware.',
+    dietaryPreferences: ['Kid-Friendly'],
+    venueType: 'backyard',
+    specialRequests: 'Include charcoal, ice, and lawn activity items.',
+    items: [
+      {
+        name: 'Cymbal Angus Beef Burger Patties (8ct)',
+        brand: 'Cymbal Butcher Reserve',
+        category: 'food',
+        subcategory: 'Mains',
+        unitPrice: 15.99,
+        quantity: 2,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Meat & Seafood - Case 4',
+        tier: 'standard',
+        notes: '2 patties per adult, pre-seasoned',
+        alternatives: [
+          { tier: 'budget', name: 'Cymbal Everyday Ground Beef Patties', brand: 'Cymbal Everyday', unitPrice: 11.49, savingsOrPremiumDiff: -4.50 },
+          { tier: 'premium', name: 'Cymbal Prime Wagyu Burger Patties', brand: 'Cymbal Gold Selection', unitPrice: 22.99, savingsOrPremiumDiff: 7.00 }
+        ]
+      },
+      {
+        name: 'Artisan Brioche Hamburger Buns (8ct)',
+        brand: 'Cymbal Bakery Fresh',
+        category: 'food',
+        subcategory: 'Bakery',
+        unitPrice: 4.49,
+        quantity: 2,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Aisle 2 - Bakery',
+        tier: 'standard',
+        alternatives: [
+          { tier: 'budget', name: 'Cymbal Classic Sesame Buns', brand: 'Cymbal Everyday', unitPrice: 2.49, savingsOrPremiumDiff: -2.00 }
+        ]
+      },
+      {
+        name: 'Gourmet Hot Dog Franks (8ct)',
+        brand: 'Cymbal Deli Classics',
+        category: 'food',
+        subcategory: 'Mains',
+        unitPrice: 5.99,
+        quantity: 2,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Meat & Seafood - Case 3',
+        tier: 'standard'
+      },
+      {
+        name: 'Classic Hot Dog Buns (8ct)',
+        brand: 'Cymbal Bakery Fresh',
+        category: 'food',
+        subcategory: 'Bakery',
+        unitPrice: 2.79,
+        quantity: 2,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Aisle 2 - Bakery',
+        tier: 'budget'
+      },
+      {
+        name: 'Homestyle Creamy Potato Salad (32oz)',
+        brand: 'Cymbal Deli Kitchen',
+        category: 'food',
+        subcategory: 'Sides',
+        unitPrice: 6.99,
+        quantity: 2,
+        unit: 'tub',
+        isChecked: true,
+        aisle: 'Deli Counter',
+        tier: 'standard'
+      },
+      {
+        name: 'Crispy Kettle Cooked BBQ Chips (Party Size)',
+        brand: 'Cymbal Snacks Co.',
+        category: 'food',
+        subcategory: 'Snacks',
+        unitPrice: 4.29,
+        quantity: 2,
+        unit: 'bag',
+        isChecked: true,
+        aisle: 'Aisle 6 - Snacks',
+        tier: 'budget'
+      },
+      {
+        name: 'Southern Sweet Tea Brewed Jug (1 Gallon)',
+        brand: 'Cymbal Beverages',
+        category: 'beverage',
+        subcategory: 'Cold Drinks',
+        unitPrice: 3.99,
+        quantity: 2,
+        unit: 'jug',
+        isChecked: true,
+        aisle: 'Dairy & Juice Coolers',
+        tier: 'standard'
+      },
+      {
+        name: 'Sparkling Lemonade Soda (12-pack cans)',
+        brand: 'Cymbal Refresh',
+        category: 'beverage',
+        subcategory: 'Soda & Seltzer',
+        unitPrice: 6.49,
+        quantity: 2,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Aisle 4 - Beverages',
+        tier: 'standard'
+      },
+      {
+        name: 'Purified Party Ice Bag (10 lbs)',
+        brand: 'Cymbal Arctic',
+        category: 'beverage',
+        subcategory: 'Essentials',
+        unitPrice: 2.99,
+        quantity: 2,
+        unit: 'bag',
+        isChecked: true,
+        aisle: 'Front Freezer - Entrance',
+        tier: 'budget'
+      },
+      {
+        name: 'Hardwood Charcoal Briquettes (16 lb bag)',
+        brand: 'Cymbal Outdoor & Grill',
+        category: 'tableware',
+        subcategory: 'Grill Supplies',
+        unitPrice: 12.99,
+        quantity: 1,
+        unit: 'bag',
+        isChecked: true,
+        aisle: 'Garden & Outdoor Living',
+        tier: 'standard'
+      },
+      {
+        name: 'Eco Heavy-Duty Compostable Plates (50ct)',
+        brand: 'Cymbal EcoChoice',
+        category: 'tableware',
+        subcategory: 'Plates',
+        unitPrice: 9.99,
+        quantity: 1,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Aisle 7 - Paper & Party',
+        tier: 'standard'
+      },
+      {
+        name: 'Insulated Cold Cups (16oz, 50ct)',
+        brand: 'Cymbal Party Essentials',
+        category: 'tableware',
+        subcategory: 'Cups',
+        unitPrice: 5.49,
+        quantity: 1,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Aisle 7 - Paper & Party',
+        tier: 'budget'
+      },
+      {
+        name: 'Recycled 3-Ply Dinner Napkins (120ct)',
+        brand: 'Cymbal Everyday',
+        category: 'tableware',
+        subcategory: 'Napkins',
+        unitPrice: 3.99,
+        quantity: 1,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Aisle 7 - Paper & Party',
+        tier: 'budget'
+      },
+      {
+        name: 'Solar Edison String Lights (25ft Warm White)',
+        brand: 'Cymbal Garden Glow',
+        category: 'decor',
+        subcategory: 'Lighting',
+        unitPrice: 18.99,
+        quantity: 1,
+        unit: 'box',
+        isChecked: true,
+        aisle: 'Seasonal & Home Decor',
+        tier: 'standard',
+        notes: 'Reusable for future outdoor events'
+      },
+      {
+        name: 'Red Gingham Fitted Picnic Tablecloths (2-Pack)',
+        brand: 'Cymbal Party Accents',
+        category: 'decor',
+        subcategory: 'Table Decor',
+        unitPrice: 7.99,
+        quantity: 1,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Aisle 7 - Party Goods',
+        tier: 'budget'
+      },
+      {
+        name: 'Lawn Beanbag Toss / Cornhole Set with Bags',
+        brand: 'Cymbal Yard Fun',
+        category: 'activities',
+        subcategory: 'Games',
+        unitPrice: 24.99,
+        quantity: 1,
+        unit: 'set',
+        isChecked: true,
+        aisle: 'Toy & Recreation Aisle',
+        tier: 'standard'
+      }
+    ]
+  },
+  {
+    id: 'tapas-cocktail-soiree',
+    title: 'Modern Tapas & Craft Cocktail Soirée',
+    partyType: 'Cocktail & Tapas',
+    theme: 'Bistro Chic & Lounge Vibes',
+    guestCount: 12,
+    targetBudget: 190,
+    tagline: 'Artisanal cheese boards, Spanish cured meats, craft mixers, and ambient candles.',
+    description: 'Sophisticated yet easy hosting with charcuterie selections, crostini, artisanal dip pairings, premium cocktail mixers, garnishes, and minimalist decor.',
+    dietaryPreferences: ['Vegetarian Friendly options'],
+    venueType: 'indoor',
+    specialRequests: 'Include fresh citrus, herbs, fancy cocktail napkins, and ambient votives.',
+    items: [
+      {
+        name: 'Artisan Charcuterie Trio (Prosciutto, Salami, Chorizo)',
+        brand: 'Cymbal Reserve Deli',
+        category: 'food',
+        subcategory: 'Appetizers',
+        unitPrice: 13.99,
+        quantity: 2,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Gourmet Cheese & Charcuterie Case',
+        tier: 'premium'
+      },
+      {
+        name: 'Aged Manchego & Gouda Tasting Board (10oz)',
+        brand: 'Cymbal Cheese Cave',
+        category: 'food',
+        subcategory: 'Cheese',
+        unitPrice: 11.49,
+        quantity: 2,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Specialty Cheese Case',
+        tier: 'premium'
+      },
+      {
+        name: 'Artisanal Rosemary & Sea Salt Crackers (2 boxes)',
+        brand: 'Cymbal Pantry Select',
+        category: 'food',
+        subcategory: 'Crackers',
+        unitPrice: 4.29,
+        quantity: 2,
+        unit: 'box',
+        isChecked: true,
+        aisle: 'Aisle 3 - Crackers & Snacks',
+        tier: 'standard'
+      },
+      {
+        name: 'Marinated Mediterranean Olives & Sun-Dried Tomatoes',
+        brand: 'Cymbal Antipasto Bar',
+        category: 'food',
+        subcategory: 'Appetizers',
+        unitPrice: 6.99,
+        quantity: 1,
+        unit: 'jar',
+        isChecked: true,
+        aisle: 'Aisle 5 - International',
+        tier: 'standard'
+      },
+      {
+        name: 'Craft Tonic Water & Blood Orange Soda Mixers (8-pack)',
+        brand: 'Cymbal Mixology Co.',
+        category: 'beverage',
+        subcategory: 'Mixers',
+        unitPrice: 8.99,
+        quantity: 2,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Aisle 4 - Mixers & Sodas',
+        tier: 'standard'
+      },
+      {
+        name: 'Fresh Organic Limes & Rosemary Sprigs Bundle',
+        brand: 'Cymbal Organic Produce',
+        category: 'beverage',
+        subcategory: 'Garnish',
+        unitPrice: 4.99,
+        quantity: 1,
+        unit: 'bunch',
+        isChecked: true,
+        aisle: 'Produce - Fresh Herbs Island',
+        tier: 'standard'
+      },
+      {
+        name: 'Crystal-Cut Stemless Acrylic Tasting Glasses (12ct)',
+        brand: 'Cymbal Host Luxury',
+        category: 'tableware',
+        subcategory: 'Glassware',
+        unitPrice: 14.99,
+        quantity: 1,
+        unit: 'set',
+        isChecked: true,
+        aisle: 'Aisle 7 - Party Goods',
+        tier: 'premium'
+      },
+      {
+        name: 'Gold Foil Stamped Cocktail Beverage Napkins (50ct)',
+        brand: 'Cymbal Celebrations',
+        category: 'tableware',
+        subcategory: 'Napkins',
+        unitPrice: 4.49,
+        quantity: 1,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Aisle 7 - Party Goods',
+        tier: 'standard'
+      },
+      {
+        name: 'Bamboo Tasting Skewers & Mini Tongs Set',
+        brand: 'Cymbal EcoChoice',
+        category: 'tableware',
+        subcategory: 'Serving',
+        unitPrice: 4.99,
+        quantity: 1,
+        unit: 'set',
+        isChecked: true,
+        aisle: 'Aisle 7 - Party Goods',
+        tier: 'budget'
+      },
+      {
+        name: 'Smokeless Glass Tea Light Candles (12-pack)',
+        brand: 'Cymbal Home Sanctuary',
+        category: 'decor',
+        subcategory: 'Atmosphere',
+        unitPrice: 6.99,
+        quantity: 1,
+        unit: 'box',
+        isChecked: true,
+        aisle: 'Aisle 8 - Home & Candles',
+        tier: 'standard'
+      },
+      {
+        name: 'Eucalyptus & Olive Branch Table Runner Garland',
+        brand: 'Cymbal Floral & Botanical',
+        category: 'decor',
+        subcategory: 'Centerpieces',
+        unitPrice: 16.99,
+        quantity: 1,
+        unit: 'piece',
+        isChecked: true,
+        aisle: 'Floral Department',
+        tier: 'standard'
+      },
+      {
+        name: 'After-Dinner Trivia & Conversation Starters Card Deck',
+        brand: 'Cymbal Game Night',
+        category: 'activities',
+        subcategory: 'Games',
+        unitPrice: 9.99,
+        quantity: 1,
+        unit: 'deck',
+        isChecked: true,
+        aisle: 'Toy & Games Aisle',
+        tier: 'standard'
+      }
+    ]
+  },
+  {
+    id: 'kids-superhero-birthday',
+    title: 'Galactic Superhero Birthday Adventure',
+    partyType: 'Birthday Party',
+    theme: 'Superheroes & Comic Fun',
+    guestCount: 20,
+    targetBudget: 175,
+    tagline: 'Bright balloons, superhero masks, pizza bites, fruit skewers, and cupcakes.',
+    description: 'High-energy, mess-friendly birthday celebration complete with themed plates, juice boxes, mini cupcakes, superhero favor bags, and a photo backdrop.',
+    dietaryPreferences: ['Nut-Free Safe', 'Kid-Friendly'],
+    venueType: 'indoor',
+    specialRequests: 'Strictly nut-free snacks, durable disposable cutlery, birthday banner.',
+    items: [
+      {
+        name: 'Cymbal Mini Cheese & Pepperoni Pizza Bagels (40ct)',
+        brand: 'Cymbal Kids Kitchen',
+        category: 'food',
+        subcategory: 'Mains',
+        unitPrice: 11.99,
+        quantity: 2,
+        unit: 'box',
+        isChecked: true,
+        aisle: 'Frozen Snacks - Freezer 8',
+        tier: 'standard',
+        notes: 'Nut-free facility'
+      },
+      {
+        name: 'Fresh Rainbow Fruit Skewer Platter (16ct)',
+        brand: 'Cymbal Market Fresh',
+        category: 'food',
+        subcategory: 'Fresh Produce',
+        unitPrice: 14.99,
+        quantity: 1,
+        unit: 'platter',
+        isChecked: true,
+        aisle: 'Produce - Pre-Cut Fruit',
+        tier: 'standard'
+      },
+      {
+        name: 'Chocolate & Vanilla Swirl Cupcakes with Sprinkles (24ct)',
+        brand: 'Cymbal Bakery Kids',
+        category: 'food',
+        subcategory: 'Dessert',
+        unitPrice: 16.99,
+        quantity: 1,
+        unit: 'box',
+        isChecked: true,
+        aisle: 'Aisle 2 - Bakery Island',
+        tier: 'standard',
+        notes: 'Peanut-free bakery guarantee'
+      },
+      {
+        name: '100% Organic Apple Juice Pouches (20-pack)',
+        brand: 'Cymbal Kids Organics',
+        category: 'beverage',
+        subcategory: 'Juice',
+        unitPrice: 9.99,
+        quantity: 1,
+        unit: 'box',
+        isChecked: true,
+        aisle: 'Aisle 4 - Kids Beverages',
+        tier: 'standard'
+      },
+      {
+        name: 'Spring Mountain Mini Water Bottles (24-pack)',
+        brand: 'Cymbal Everyday Hydration',
+        category: 'beverage',
+        subcategory: 'Water',
+        unitPrice: 4.49,
+        quantity: 1,
+        unit: 'case',
+        isChecked: true,
+        aisle: 'Aisle 4 - Water Wall',
+        tier: 'budget'
+      },
+      {
+        name: 'Superhero Action Tableware Kit (Plates, Cups, Napkins - 24 guests)',
+        brand: 'Cymbal Party Central',
+        category: 'tableware',
+        subcategory: 'Complete Kit',
+        unitPrice: 18.99,
+        quantity: 1,
+        unit: 'kit',
+        isChecked: true,
+        aisle: 'Aisle 7 - Themed Party Goods',
+        tier: 'standard'
+      },
+      {
+        name: 'Color Pop Balloon Garland Kit with Pump (60 balloons)',
+        brand: 'Cymbal Party Glow',
+        category: 'decor',
+        subcategory: 'Balloons',
+        unitPrice: 12.99,
+        quantity: 1,
+        unit: 'kit',
+        isChecked: true,
+        aisle: 'Aisle 7 - Party Decor',
+        tier: 'budget'
+      },
+      {
+        name: 'Comic Hero "Happy Birthday" Wall Banner & Backdrop',
+        brand: 'Cymbal Celebrations',
+        category: 'decor',
+        subcategory: 'Banners',
+        unitPrice: 8.99,
+        quantity: 1,
+        unit: 'set',
+        isChecked: true,
+        aisle: 'Aisle 7 - Party Goods',
+        tier: 'standard'
+      },
+      {
+        name: 'Felt Superhero Capes & Masks Pack (12-pack)',
+        brand: 'Cymbal Fun World',
+        category: 'activities',
+        subcategory: 'Dress Up & Favors',
+        unitPrice: 19.99,
+        quantity: 1,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Toy & Party Favor Aisle',
+        tier: 'standard'
+      },
+      {
+        name: 'Pre-Filled Kids Goodie Treat Bags (12ct)',
+        brand: 'Cymbal Party Central',
+        category: 'activities',
+        subcategory: 'Party Favors',
+        unitPrice: 12.49,
+        quantity: 1,
+        unit: 'pack',
+        isChecked: true,
+        aisle: 'Aisle 7 - Party Favors',
+        tier: 'budget'
+      }
+    ]
+  }
+];
+
+export const POPULAR_EVENT_TYPES = [
+  'Birthday Party',
+  'BBQ & Cookout',
+  'Cocktail & Tapas Soirée',
+  'Game Night & Watch Party',
+  'Kids Theme Party',
+  'Dinner & Wine Gathering',
+  'Baby / Bridal Shower',
+  'Holiday & Seasonal Festivity',
+  'Graduation Celebration',
+  'Casual Weekend Hangout'
+];
+
+export const POPULAR_THEMES = [
+  'Tropical Luau & Tiki',
+  'Rustic Smokehouse BBQ',
+  'Bistro Chic & Lounge',
+  'Retro 80s / 90s Neon',
+  'Taco Fiesta & Margarita Bar',
+  'Elegant Black & Gold Gala',
+  'Cozy Autumn Harvest',
+  'Superheroes & Adventure',
+  'Garden High Tea',
+  'Italian Pasta & Pizza Night'
+];
+
+export const DIETARY_OPTIONS = [
+  'Vegetarian Friendly',
+  'Vegan Options',
+  'Gluten-Free Certified',
+  'Nut-Free Safe',
+  'Dairy-Free / Lactose-Free',
+  'Keto / Low-Carb',
+  'Kid-Friendly Choices',
+  'Halal / Kosher Friendly'
+];
